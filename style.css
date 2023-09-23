@@ -40,11 +40,8 @@ nav ul li a:hover{
     font-size: 20px;
     background-color: rgb(180, 152, 118);
     box-shadow: 10px 10px 30px rgba(223, 10, 10, 0.75);
-    border-radius: 30%;
+    border-radius: 25px;
     padding: 3px;
-    border:3px solid rgba(243, 71, 71, 0.75);
-    border-top: none;
-    border-left: none;
 }
 nav ul li a::after{
     content:"";
@@ -65,17 +62,56 @@ nav ul li a:hover::after{
     cursor: pointer;
     margin-left: 10px;
 }
-main section{
-    color: wheat;
+main{
+    height:60vh;/*height-vh, width-vw */
     display: flex;
     flex-direction: column;
-    gap:20px;
     justify-content: center;
     align-items: center;
+    gap:20px;
+}
+main section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    color: wheat;
     font-size: 20px;
-    height:60vh;/*height-vh, width-vw */
     letter-spacing: 2px;
     word-spacing: 5px;
+}
+main .button{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+main button{
+    color: #fff;
+    background: transparent;
+    text-transform: uppercase;
+    width: 200px;
+    border-radius: 25px;
+    padding: 15px 0;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid #009688;
+    position: relative;
+}
+main button span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top:0;
+    left:0;
+    border-radius: 25px;
+    z-index: -1;
+    transition: 0.5s;
+}
+main button:hover span{
+    width: 100%;
 }
 footer{
     height: 10vh;
